@@ -34,12 +34,17 @@
                             <div class="form-group col-md-6">
                                 <input type="password" class="form-control" placeholder="Password" formControlName="password">
                                 <span class="text-danger" *ngIf="(signupForm.get('password').touched || submitted) && signupForm.get('password').errors?.required">Please enter password</span>
+                                <span class="text-danger" *ngIf="signupForm.get('password').touched && signupForm.get('password').errors?.invalidPassword">Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                                    letter and 1 number</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <input type="password" class="form-control" placeholder="Confirm Password" formControlName="cPassword">
                                 <span class="text-danger" *ngIf="(signupForm.get('cPassword').touched || submitted) && signupForm.get('cPassword').errors?.required">Confirm your password</span>
+                                <span class="text-danger" *ngIf="signupForm.get('cPassword').touched && signupForm.get('cPassword').errors?.passwordMismatch">
+                                    Password doesn't match
+                                </span>
                             </div>
                         </div>
                         <div class="form-group">
