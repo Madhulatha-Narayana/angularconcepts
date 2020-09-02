@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="signup-form col-md-9">
+                    <form class="mt-30" [formGroup]="signupForm" (submit)="signup()">
+                        <div class="form-group text-center">
+                            <h2>SignUp</h2>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="First name" formControlName="firstname">
+                                <span class="text-danger" *ngIf="(signupForm.get('firstname').touched || submitted) && signupForm.get('firstname').errors?.required">Firstname Mandatory</span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="Last name" formControlName="lastname">
+                                <span class="text-danger" *ngIf="(signupForm.get('lastname').touched || submitted) && signupForm.get('lastname').errors?.required">Lastname Mandatory</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="User name" formControlName="username">
+                                <span class="text-danger" *ngIf="(signupForm.get('username').touched || submitted) && signupForm.get('username').errors?.required">Username Mandatory</span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" placeholder="Email" formControlName="email">
+                                <span class="text-danger" *ngIf="(signupForm.get('email').touched || submitted) && signupForm.get('email').errors?.required">Email Required</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="Mobile number" formControlName="phone">
+                                <span class="text-danger" *ngIf="(signupForm.get('phone').touched || submitted) && signupForm.get('phone').errors?.required">Mobile number Required</span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                                <span class="text-danger" *ngIf="(signupForm.get('password').touched || submitted) && signupForm.get('password').errors?.required">Please enter password</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="password" class="form-control" placeholder="Confirm Password" formControlName="cPassword">
+                                <span class="text-danger" *ngIf="(signupForm.get('cPassword').touched || submitted) && signupForm.get('cPassword').errors?.required">Confirm your password</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary float-right" type="submit">Signup</button>
+                            <div>Already have an account? <a (click)="login()" href="javascript:void(0)">Login</a> here</div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>

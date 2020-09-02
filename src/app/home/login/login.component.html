@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row vertical-center">
+        <div class="login-form">
+            <form class="mt-20" [formGroup]="loginForm" (submit)="login()">
+                <div class="form-group text-center">
+                    <h2>Login</h2>
+                </div>
+                <div class="form-group" style="padding-top: 10px;">
+                    <input type="text" class="form-control" formControlName="email" placeholder="Username/email">
+                </div>
+                <div class="form-group" style="padding-top: 10px;">
+                    <input type="password" class="form-control" formControlName="password" placeholder="password">
+                </div>
+                <div class="form-group text-center">
+                    <button class="btn btn-primary" type="submit">Login</button>
+                    <div>
+                        Don't have an account? Click here to <a (click)="signup()" href="javascript:void(0)">signup</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

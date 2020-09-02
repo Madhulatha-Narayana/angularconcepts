@@ -1,0 +1,16 @@
+.signup-form {
+    top: 20%;
+    left: 15%;;
+    position: relative;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 2px lightgray;
+}
+
+form {
+    padding: 50px;
+}
+
+.form-group {
+    padding-top: 10px;
+}
